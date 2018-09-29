@@ -1,0 +1,28 @@
+package Cmd;
+
+message MsgBase
+{
+    required uint32 cmd = 1;
+    optional string msg = 2;
+}
+
+// Client => Login
+message RequestLoginCmd_CS
+{
+    required string id = 1; 
+    required string password = 2;
+}
+
+// Login => Client
+message ReturnLoginCmd_SC
+{
+    required string addr = 1; // 网关服IP + 端口
+    required string token = 2;  // 登录口令(有效期:30s)
+}
+
+// Login => Gateway
+message NewClientComeIn_SS
+{
+    required string uid = 1;
+    required string token = 2;
+}

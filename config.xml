@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config version="1">
+    <GatewayServer>
+        <Gateway4LoginAddr>127.0.0.1:6001</Gateway4LoginAddr>
+        <Gateway4GameAddr>127.0.0.1:6002</Gateway4GameAddr>
+    </GatewayServer>
+    <LoginServer>
+        <Login4ClientAddr>127.0.0.1:6003</Login4ClientAddr>
+        <Login2GatewayAddr>127.0.0.1:6001</Login2GatewayAddr>
+    </LoginServer>
+</config>
