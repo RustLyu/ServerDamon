@@ -3,9 +3,10 @@
     <GatewayServer>
         <Gateway4LoginAddr>127.0.0.1:6001</Gateway4LoginAddr>
         <Gateway4GameAddr>127.0.0.1:6002</Gateway4GameAddr>
+        <Gateway4ClientAddr>127.0.0.1:6004</Gateway4ClientAddr>
     </GatewayServer>
     <LoginServer>
-        <Login4ClientAddr>127.0.0.1:6003</Login4ClientAddr>
+        <Login4ClientAddr>192.168.71.128:6003</Login4ClientAddr>
         <Login2GatewayAddr>127.0.0.1:6001</Login2GatewayAddr>
     </LoginServer>
 </config>
