@@ -2,6 +2,6 @@ package Cmd;
 
 enum MsgType
 {
-    LoginCmd = 1;
-    GatewayCmd = 2;
+    LoginCmd_enum = 1;
+    GatewayCmd_enum = 2;
 }

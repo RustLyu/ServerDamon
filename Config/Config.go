@@ -20,6 +20,7 @@ type gateWayAddr struct {
     XMLName    xml.Name `xml:"GatewayServer"`
     Gateway4LoginAddr   string   `xml:"Gateway4LoginAddr"`
     Gateway4GameAddr    string   `xml:"Gateway4GameAddr"`
+    Gateway4ClientAddr    string   `xml:"Gateway4ClientAddr"`
 }
 
 type loginAddr struct {
@@ -64,6 +65,10 @@ func (info ConfigInfo) GetGateway4LoginAddr() string{
 
 func (info ConfigInfo) GetGateway4GameAddr() string{
     return info.Svs[0].Gateway4GameAddr
+}
+
+func (info ConfigInfo) GetGateway4ClientAddr() string{
+    return info.Svs[0].Gateway4ClientAddr
 }
 
 func (info ConfigInfo) GetLogin4ClientAddr() string{

@@ -26,3 +26,12 @@ message NewClientComeIn_SS
     required string uid = 1;
     required string token = 2;
 }
+
+message LoginCmd
+{
+    required string id = 1; // UID
+    required string password = 2;
+    required string msg = 3;
+    required int32  length = 4;
+    required int32  cnt = 5;
+}
