@@ -1,30 +1,36 @@
 package main
 
 import (
-    //"fmt"
     "log"
+    //"github.com/golang/protobuf/descriptor"
+    "../util"
 )
 
-type MsgHandler func(int, int)
+// TODO fixed me
+var s_msg2HandlerMap = make(map[int]util.MsgHandler)
 
-type Test struct{
-    a string
-}
-
-type User struct {
-    Name string
-    Age  int8
-}
-
-var s_msg2HandlerMap = make(map[int]MsgHandler)
-//msg2HandlerMap := make(map[int]Test)
-
-func registerMsgHandler(msgType int, handler MsgHandler){
+// TODO fix me
+func RegisterMsgHandler(msgType int, handler util.MsgHandler){
     mm, ok := s_msg2HandlerMap[msgType]
     if !ok {
         s_msg2HandlerMap[msgType] = handler
+        log.Println("RegisterMsgHandler ok")
     } else {
         log.Println("duplicate register msg handler")
-        mm(1, 2)
+        log.Println(mm)
     }
+}
+
+func handler(buf []byte){
+    log.Println("handler test")
+}
+
+func Init(){
+    RegisterMsgHandler(100, handler)
+   // hand, find := s_msg2HandlerMap["666"]
+   // if find == true{
+   //     hand(4, 5)
+   // }else{
+   //     log.Println("duplicate register msg handler 11111111")
+   // }
 }

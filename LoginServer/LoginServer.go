@@ -10,33 +10,33 @@ import (
     "../Config"
     "log"
     //"os"
-    //"github.com/golang/protobuf/proto"
-    //"../Cmd"
-    )
+    "github.com/golang/protobuf/proto"
+    "../Cmd"
+)
 
-func readMessage(conn net.Conn) {
-    defer conn.Close()
-        //buf := make([]byte, 4096, 4096)
-        for {
-            //cnt, err := conn.Read(buf)
-            //    if err != nil {
-            //        panic(err)
-            //    }
-            // stReceive := &Cmd.LoginCmd{}
-            // pData := buf[:cnt]
-
-            // err = proto.Unmarshal(pData, stReceive)
-            // if err != nil {
-            //     panic(err)
-            // }
-
-            //fmt.Println("receive:", conn.RemoteAddr())//, stReceive)
-                // if *stReceive.Message == "stop" {
-                //     os.Exit(1)
-                //     }
-                // }
-    }
-}
+// func readMessage(conn net.Conn) {
+//     defer conn.Close()
+//         buf := make([]byte, 4096, 4096)
+//         for {
+//             cnt, err := conn.Read(buf)
+//                 if err != nil {
+//                     panic(err)
+//                 }
+//             stReceive := &Cmd.LoginCmd{}
+//             pData := buf[:cnt]
+//             // log.Print(type(pData))
+// 
+//             err = proto.Unmarshal(pData, stReceive)
+//             if err != nil {
+//                 panic(err)
+//             }
+// 
+//             fmt.Println("receive:", conn.RemoteAddr())//, stReceive)
+//             if *stReceive.Message == "stop" {
+//                 os.Exit(1)
+//             }
+//         }
+// }
 
 type timeHandler struct {
     format string
@@ -47,19 +47,29 @@ func (th *timeHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
     w.Write([]byte("The time is: " + tm))
 }
 
-func IndexHandler(w http.ResponseWriter, r * http.Request){
+func Handler4Client(w http.ResponseWriter, r * http.Request){
     fmt.Fprintln(w, "hello world")
+
+    handler, find := s_msg2HandlerMap[100]
+    if find == true{
+        buf := make([]byte, 4, 4)
+        handler(buf)
+    }else{
+        log.Println("can not find msg handler")
+    }
 }
 
 func main() {
     // server client => Login
     config := Config.GetInstance()
-    handler, find := s_msg2HandlerMap[100]
-    if find == true{
-        handler(1, 2)
-    }else{
-        log.Println("can not find msg handler")
-    }
+    Init()
+    // RegisterMsgHandler(100, handler)
+    // handler, find := s_msg2HandlerMap[100]
+    // if find == true{
+    //     handler(1, 2)
+    // }else{
+    //     log.Println("can not find msg handler")
+    // }
     // go func() {
     //     //listener, err := net.Listen("tcp", "localhost:6603")
     //     listener, err := net.Listen("tcp",config.GetLogin4ClientAddr())
@@ -76,10 +86,10 @@ func main() {
     //     }
 
     // }()
-    for{
-        http.HandleFunc("/", IndexHandler)
+    go func(){
+        http.HandleFunc("/handler4Client/", Handler4Client)
         http.ListenAndServe(config.GetLogin4ClientAddr(), nil)
-    }
+    }()
     //go func(){
     //    mux := http.NewServeMux()
 
@@ -106,24 +116,25 @@ func main() {
         defer conn.Close()
         cnt := 0
         sender := bufio.NewScanner(os.Stdin)
-        //inputStr := sender.Text()
+        inputStr := sender.Text()
         for sender.Scan() {
             cnt++
-                   // stSend := &Cmd.LoginCmd{
-                   //     Message: &inputStr,
-                   //     Length:  proto.Int(len(sender.Text())),
-                   //     Cnt:     proto.Int(cnt),
-                   // }
+            stSend := &Cmd.LoginCmd{
+                Msg: &inputStr,
+                Length:  proto.Int(len(sender.Text())),
+                Cnt:     proto.Int(cnt),
+            }
+            //var t string
+            // stSend.AppendToString(t)
+            pData, err := proto.Marshal(stSend)
+            if err != nil {
+                panic(err)
+            }
 
-                   // pData, err := proto.Marshal(stSend)
-                   // if err != nil {
-                   //     panic(err)
-                   // }
-
-                   // conn.Write(pData)
-                   // if sender.Text() == "stop" {
-                   //     return
-                   // }
+            conn.Write(pData)
+            if sender.Text() == "stop" {
+                return
+            }
         }
     }()
 
