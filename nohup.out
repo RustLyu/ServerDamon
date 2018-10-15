@@ -1,0 +1,16 @@
+2018/09/21 06:27:28 can not find msg handler
+panic: http: multiple registrations for /
+
+goroutine 1 [running]:
+net/http.(*ServeMux).Handle(0x8ce840, 0x6c5b8c, 0x1, 0x70d6a0, 0x6da150)
+	/opt/go/src/net/http/server.go:2377 +0x221
+net/http.(*ServeMux).HandleFunc(0x8ce840, 0x6c5b8c, 0x1, 0x6da150)
+	/opt/go/src/net/http/server.go:2395 +0x5a
+net/http.HandleFunc(0x6c5b8c, 0x1, 0x6da150)
+	/opt/go/src/net/http/server.go:2407 +0x4b
+main.main()
+	/home/lvshuiku/dev/server/LoginServer/LoginServer.go:80 +0xd3
+2018/09/21 06:35:10 can not find msg handler
+2018/09/21 06:38:37 can not find msg handler
+2018/09/28 08:29:54 can not find msg handler
+2018/09/28 08:32:52 can not find msg handler

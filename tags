@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Cmd	Cmd/MsgBase.pb.go	/^package Cmd$/;"	p
+Cmd	Cmd/defines.pb.go	/^package Cmd$/;"	p
+Descriptor	Cmd/MsgBase.pb.go	/^func (*MsgBase) Descriptor() ([]byte, []int) {$/;"	f
+Descriptor	Cmd/MsgBase.pb.go	/^func (*NewClientComeIn_SS) Descriptor() ([]byte, []int) {$/;"	f
+Descriptor	Cmd/MsgBase.pb.go	/^func (*RequestLoginCmd_CS) Descriptor() ([]byte, []int) {$/;"	f
+Descriptor	Cmd/MsgBase.pb.go	/^func (*ReturnLoginCmd_SC) Descriptor() ([]byte, []int) {$/;"	f
+Enum	Cmd/defines.pb.go	/^func (x MsgType) Enum() *MsgType {$/;"	f
+EnumDescriptor	Cmd/defines.pb.go	/^func (MsgType) EnumDescriptor() ([]byte, []int) {$/;"	f
+GetAddr	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) GetAddr() string {$/;"	f
+GetCmd	Cmd/MsgBase.pb.go	/^func (m *MsgBase) GetCmd() uint32 {$/;"	f
+GetId	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) GetId() string {$/;"	f
+GetMsg	Cmd/MsgBase.pb.go	/^func (m *MsgBase) GetMsg() string {$/;"	f
+GetPassword	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) GetPassword() string {$/;"	f
+GetToken	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) GetToken() string {$/;"	f
+GetToken	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) GetToken() string {$/;"	f
+GetUid	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) GetUid() string {$/;"	f
+IndexHandler	LoginServer/LoginServer.go	/^func IndexHandler(w http.ResponseWriter, r * http.Request){$/;"	f
+MsgBase	Cmd/MsgBase.pb.go	/^type MsgBase struct {$/;"	t
+MsgHandler	LoginServer/LoginMsgManager.go	/^type MsgHandler func(int, int)$/;"	t
+MsgType	Cmd/defines.pb.go	/^type MsgType int32$/;"	t
+MsgType_GatewayCmd	Cmd/defines.pb.go	/^	MsgType_GatewayCmd MsgType = 2$/;"	c
+MsgType_LoginCmd	Cmd/defines.pb.go	/^	MsgType_LoginCmd   MsgType = 1$/;"	c
+MsgType_name	Cmd/defines.pb.go	/^var MsgType_name = map[int32]string{$/;"	v
+MsgType_value	Cmd/defines.pb.go	/^var MsgType_value = map[string]int32{$/;"	v
+NewClientComeIn_SS	Cmd/MsgBase.pb.go	/^type NewClientComeIn_SS struct {$/;"	t
+ProtoMessage	Cmd/MsgBase.pb.go	/^func (*MsgBase) ProtoMessage()    {}$/;"	f
+ProtoMessage	Cmd/MsgBase.pb.go	/^func (*NewClientComeIn_SS) ProtoMessage()    {}$/;"	f
+ProtoMessage	Cmd/MsgBase.pb.go	/^func (*RequestLoginCmd_CS) ProtoMessage()    {}$/;"	f
+ProtoMessage	Cmd/MsgBase.pb.go	/^func (*ReturnLoginCmd_SC) ProtoMessage()    {}$/;"	f
+RegisterMsgHandler	LoginServer/LoginMsgManager.go	/^func RegisterMsgHandler(msgType string, handler MsgHandler){$/;"	f
+RequestLoginCmd_CS	Cmd/MsgBase.pb.go	/^type RequestLoginCmd_CS struct {$/;"	t
+Reset	Cmd/MsgBase.pb.go	/^func (m *MsgBase) Reset()         { *m = MsgBase{} }$/;"	f
+Reset	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) Reset()         { *m = NewClientComeIn_SS{} }$/;"	f
+Reset	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) Reset()         { *m = RequestLoginCmd_CS{} }$/;"	f
+Reset	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) Reset()         { *m = ReturnLoginCmd_SC{} }$/;"	f
+ReturnLoginCmd_SC	Cmd/MsgBase.pb.go	/^type ReturnLoginCmd_SC struct {$/;"	t
+ServeHTTP	LoginServer/LoginServer.go	/^func (th *timeHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {$/;"	f
+String	Cmd/MsgBase.pb.go	/^func (m *MsgBase) String() string { return proto.CompactTextString(m) }$/;"	f
+String	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) String() string { return proto.CompactTextString(m) }$/;"	f
+String	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) String() string { return proto.CompactTextString(m) }$/;"	f
+String	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) String() string { return proto.CompactTextString(m) }$/;"	f
+String	Cmd/defines.pb.go	/^func (x MsgType) String() string {$/;"	f
+UnmarshalJSON	Cmd/defines.pb.go	/^func (x *MsgType) UnmarshalJSON(data []byte) error {$/;"	f
+XXX_DiscardUnknown	Cmd/MsgBase.pb.go	/^func (m *MsgBase) XXX_DiscardUnknown() {$/;"	f
+XXX_DiscardUnknown	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) XXX_DiscardUnknown() {$/;"	f
+XXX_DiscardUnknown	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) XXX_DiscardUnknown() {$/;"	f
+XXX_DiscardUnknown	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) XXX_DiscardUnknown() {$/;"	f
+XXX_Marshal	Cmd/MsgBase.pb.go	/^func (m *MsgBase) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {$/;"	f
+XXX_Marshal	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {$/;"	f
+XXX_Marshal	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {$/;"	f
+XXX_Marshal	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {$/;"	f
+XXX_Merge	Cmd/MsgBase.pb.go	/^func (dst *MsgBase) XXX_Merge(src proto.Message) {$/;"	f
+XXX_Merge	Cmd/MsgBase.pb.go	/^func (dst *NewClientComeIn_SS) XXX_Merge(src proto.Message) {$/;"	f
+XXX_Merge	Cmd/MsgBase.pb.go	/^func (dst *RequestLoginCmd_CS) XXX_Merge(src proto.Message) {$/;"	f
+XXX_Merge	Cmd/MsgBase.pb.go	/^func (dst *ReturnLoginCmd_SC) XXX_Merge(src proto.Message) {$/;"	f
+XXX_Size	Cmd/MsgBase.pb.go	/^func (m *MsgBase) XXX_Size() int {$/;"	f
+XXX_Size	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) XXX_Size() int {$/;"	f
+XXX_Size	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) XXX_Size() int {$/;"	f
+XXX_Size	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) XXX_Size() int {$/;"	f
+XXX_Unmarshal	Cmd/MsgBase.pb.go	/^func (m *MsgBase) XXX_Unmarshal(b []byte) error {$/;"	f
+XXX_Unmarshal	Cmd/MsgBase.pb.go	/^func (m *NewClientComeIn_SS) XXX_Unmarshal(b []byte) error {$/;"	f
+XXX_Unmarshal	Cmd/MsgBase.pb.go	/^func (m *RequestLoginCmd_CS) XXX_Unmarshal(b []byte) error {$/;"	f
+XXX_Unmarshal	Cmd/MsgBase.pb.go	/^func (m *ReturnLoginCmd_SC) XXX_Unmarshal(b []byte) error {$/;"	f
+_	Cmd/MsgBase.pb.go	/^const _ = proto.ProtoPackageIsVersion2 \/\/ please upgrade the proto package$/;"	c
+_	Cmd/MsgBase.pb.go	/^var _ = fmt.Errorf$/;"	v
+_	Cmd/MsgBase.pb.go	/^var _ = math.Inf$/;"	v
+_	Cmd/MsgBase.pb.go	/^var _ = proto.Marshal$/;"	v
+_	Cmd/defines.pb.go	/^const _ = proto.ProtoPackageIsVersion2 \/\/ please upgrade the proto package$/;"	c
+_	Cmd/defines.pb.go	/^var _ = fmt.Errorf$/;"	v
+_	Cmd/defines.pb.go	/^var _ = math.Inf$/;"	v
+_	Cmd/defines.pb.go	/^var _ = proto.Marshal$/;"	v
+fileDescriptor_MsgBase_c7254bee937c03b1	Cmd/MsgBase.pb.go	/^var fileDescriptor_MsgBase_c7254bee937c03b1 = []byte{$/;"	v
+fileDescriptor_defines_1c90929edd1c7eec	Cmd/defines.pb.go	/^var fileDescriptor_defines_1c90929edd1c7eec = []byte{$/;"	v
+handler	LoginServer/LoginMsgManager.go	/^func handler(a,b int){$/;"	f
+init	Cmd/MsgBase.pb.go	/^func init() { proto.RegisterFile("MsgBase.proto", fileDescriptor_MsgBase_c7254bee937c03b1) }$/;"	f
+init	Cmd/MsgBase.pb.go	/^func init() {$/;"	f
+init	Cmd/defines.pb.go	/^func init() { proto.RegisterFile("defines.proto", fileDescriptor_defines_1c90929edd1c7eec) }$/;"	f
+init	Cmd/defines.pb.go	/^func init() {$/;"	f
+main	DBServer/DBServer.go	/^func main(){$/;"	f
+main	DBServer/DBServer.go	/^package main;$/;"	p
+main	GatewayServer/GatewayServer.go	/^func main() {$/;"	f
+main	GatewayServer/GatewayServer.go	/^package main$/;"	p
+main	LoginServer/LoginMsgManager.go	/^package main$/;"	p
+main	LoginServer/LoginServer.go	/^func main() {$/;"	f
+main	LoginServer/LoginServer.go	/^package main$/;"	p
+readMessage	GatewayServer/GatewayServer.go	/^func readMessage(conn net.Conn) {$/;"	f
+readMessage	LoginServer/LoginServer.go	/^func readMessage(conn net.Conn) {$/;"	f
+s_msg2HandlerMap	LoginServer/LoginMsgManager.go	/^var s_msg2HandlerMap = make(map[[]byte]MsgHandler)$/;"	v
+timeHandler	LoginServer/LoginServer.go	/^type timeHandler struct {$/;"	t
+xxx_messageInfo_MsgBase	Cmd/MsgBase.pb.go	/^var xxx_messageInfo_MsgBase proto.InternalMessageInfo$/;"	v
+xxx_messageInfo_NewClientComeIn_SS	Cmd/MsgBase.pb.go	/^var xxx_messageInfo_NewClientComeIn_SS proto.InternalMessageInfo$/;"	v
+xxx_messageInfo_RequestLoginCmd_CS	Cmd/MsgBase.pb.go	/^var xxx_messageInfo_RequestLoginCmd_CS proto.InternalMessageInfo$/;"	v
+xxx_messageInfo_ReturnLoginCmd_SC	Cmd/MsgBase.pb.go	/^var xxx_messageInfo_ReturnLoginCmd_SC proto.InternalMessageInfo$/;"	v
